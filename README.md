@@ -19,46 +19,46 @@ A React-based application for dynamically generating and previewing forms based 
    ```bash
    git clone https://github.com/your-repo/dynamic-form-generator.git
    cd dynamic-form-generator
-Install dependencies:
+   
+2. Install dependencies:
+   ```bash
+   npm install
+   
+3. Start the development server:
+   ```bash
+   npm run dev
+   
+4. Open the application in your browser:
+   
+   http://localhost:3000
+   
+5. Project Structure:
+   ```bash
+   src/
+   ├── components/         # Reusable React components
+   ├── hooks/              # Custom React hooks
+   ├── tests/              # Unit and E2E test files
+   ├── App.tsx             # Root application component
+   ├── main.tsx            # Application entry point
+   ├── index.css           # Global styles
+   └── types.d.ts          # TypeScript type definitions
+   
+   public/                 # Public assets (e.g., favicon, images)
 
-bash
-Copy code
-npm install
-Start the development server:
 
-bash
-Copy code
-npm run dev
-Open the application in your browser:
+# Usage
 
-bash
-Copy code
-http://localhost:3000
-Project Structure
-csharp
-Copy code
-src/
-├── components/         # Reusable React components
-├── hooks/              # Custom React hooks
-├── tests/              # Unit and E2E test files
-├── App.tsx             # Root application component
-├── main.tsx            # Application entry point
-├── index.css           # Global styles
-└── types.d.ts          # TypeScript type definitions
-
-public/                 # Public assets (e.g., favicon, images)
-Usage
-Define a Form Schema
+## Define a Form Schema
 Update the JSON in the JSON Editor panel to define your form fields. Example:
 
-json
-Copy code
+
+```json
 {
   "formTitle": "Contact Us",
   "formDescription": "Please fill out the form below.",
   "fields": [
     {
-      "id": "name",
+    "id": "name",
       "type": "text",
       "label": "Name",
       "required": true,
@@ -79,54 +79,30 @@ Copy code
     }
   ]
 }
+```
+
 Submit the Form
 Preview the form in the form preview panel and submit to see the submitted data.
 
-Testing
-Run Unit Tests
+# Testing
+
+## Run Unit Tests
 To execute unit tests using Jest:
+   ```bash
+   npm run test
+   ```
 
-bash
-Copy code
-npm run test
-Run End-to-End Tests
+## Run End-to-End Tests
 To execute E2E tests using Playwright:
+   ```bash
+   npx playwright test
+   ```
 
-bash
-Copy code
-npx playwright test
-Dependencies
-React: Frontend library for building the UI.
-react-hook-form: For form handling and validation.
-Tailwind CSS: For styling.
-TypeScript: For type checking.
-@testing-library/react: For unit tests.
+## Dependencies
+React: Frontend library for building the UI. \
+react-hook-form: For form handling and validation. \
+Tailwind CSS: For styling. \
+TypeScript: For type checking. \
+@testing-library/react: For unit tests. \
 Playwright: For end-to-end testing.
-Contributing
-Contributions are welcome! To contribute:
-
-Fork the repository.
-Create a new feature branch.
-Make your changes and commit them.
-Open a pull request.
-License
-This project is licensed under the MIT License.
-
-Screenshots
-JSON Editor and Form Preview
-
-Contact
-For any questions or feedback, please reach out:
-
-Email: your-email@example.com
-GitHub: Your GitHub Profile
-css
-Copy code
-
-Feel free to modify the placeholders with your actual details (e.g., GitHub link, email address, screenshots).
-
-
-
-
-
 
