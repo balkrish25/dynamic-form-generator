@@ -1,9 +1,12 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import FormPreview from "../../components/FormPreview";
 
 const schema = {
-  fields: [ 
+  formTitle: "Test Form", // Add formTitle
+  formDescription: "This is a test form.", // Add formDescription
+  fields: [
     {
       id: "name",
       type: "text",
@@ -32,5 +35,6 @@ describe("FormPreview Component", () => {
     fireEvent.change(input, { target: { value: "John Doe" } });
     fireEvent.click(screen.getByText("Submit"));
     expect(screen.queryByText("Name is required")).not.toBeInTheDocument();
+    expect(screen.getByText("Form submitted successfully")).toBeInTheDocument();
   });
 });
